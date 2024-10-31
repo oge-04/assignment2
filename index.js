@@ -1,28 +1,29 @@
-function submitForm(string,palindrome,total) {
-    
+let stringInput = document.getElementById("stringInput");
+
+function submitForm() {
     // #1
-    let string = document.getElementById("reverseString").value;
-    let stringReverse = string.forward.split("").reverse().join("");
-    document.getElementById("stringOutput").innerHTML = stringReverse;
+   
+    function reverseString(){
 
-
+        let stringOutput = "";
+        for(let length = stringInput.length-1; i >= 0; i--)
+            {
+          stringOutput += str[i];
+        }
+        return stringOutput;
+      }
+      
+        document.getElementById("stringOutput").innerHTML = stringOutput;
+    
+      
     // #2
-    let palindrome = document.getElementById("palindrome").value;
-    let palOuput = forward.split("").reverse().join("");
-    if (palindrome==palOuput) {
-        palindromeOutput =  "true"
-    } else { 
-        palindromeOutput = "false"
-    }
-    document.getElementById("plaindromeOutput").innerHTML = palindromeOutput;
+   
 
     // #3
-    let subtotal = document.getElementById("subtotal").value;
-    let tip = document.getElementById("tip").value;
+    let subtotal = document.getElementById("subtotalInput").value;
+    let tip = document.getElementById("tipInput").value;
     let total = subtotal * (1 + (tip/100));
 
-    document.getElementById("totalAmount").innerHTML = total;
-
-//return stringReverse, palindromeOutput, total
+    document.getElementById("totalOutput").innerHTML = total;
 
 }

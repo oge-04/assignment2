@@ -8,19 +8,35 @@
 <body>
     <h1> Assignment 2</h1>
     <h3>Ogechukwu Eze</h3>
-    <form action="">
-        <label for=""> 1. Enter a sting and the string will be displayed in reverse</label>
-        <input type="text" value="" placeholder="Enter String">
-        <input type="button" value="Submit">
+
+    <form>
+
+        <label for="rstring"> 1. Enter a sting and the string will be displayed in reverse</label>
+        <input type="text"  id="reverseString" name="rstring" placeholder="Enter String">
+        <p class="output" id="stringOutput">  </p>
         <br>
-        <label for=""> 2. Enter a series of numbers to check if it is a palindrome</label>
-        <input type="text" value="" placeholder="Enter Numbers">
-        <input type="button" value="Submit">
+
+        
+        <label for="palind"> 2. Enter a series of numbers to check if it is a palindrome</label>
+        <input type="text" id="palindrome" name="palind" placeholder="Enter Numbers">
+        <p class="output" id="palindromeOutput"> </p> 
+        
         <br>
-        <label for=""> 3. Calulate total amount to be paid</label>
-        <input type="text" value="" placeholder="Enter Amount">
-        <input type="button" value="Submit">
+        
+        <label for="total"> 3. Calulate total amount to be paid</label>
+        <input type="number"  id="subtotal" name="subtotal" placeholder="Enter Amount">
+        <input type="number" id="tip" name="tip" placeholder="Tip Percentage (eg:3)">
+        <p class="output" id="totalAmount"> </p>
+        
         <br>
+
+        <input type="submit" id="submitButton" value="Submit" onclick="submitForm()">
+
     </form>
+    
+    <script> src="index.js" </script>
+
 </body>
+
+
 </html>

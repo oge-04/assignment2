@@ -4,38 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Assignment 2</title>
+    <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
+
     <h1> Assignment 2</h1>
-    <h3>Ogechukwu Eze</h3>
-
-    <form id="assignment2" action="">
-
-        <label for="string"> 1. Enter a string and the string will be displayed in reverse</label>
-        <input type="text"  id="stringInput" name="stringInput" placeholder="Enter String">
-        <p class="output" id="stringOutput">  </p>
-        <br>
-
-        
-        <label for="numbers"> 2. Enter a series of numbers to check if it is a palindrome</label>
-        <input type="text" id="numbersInput" name="numbers" placeholder="Enter Numbers">
-        <p class="output" id="numbersOutput"> </p> 
-        
-        <br>
-        
-        <label for="total"> 3. Calulate total amount to be paid</label>
-        <input type="number"  id="subtotalInput" name="subtotalInput" placeholder="Enter Subtotal">
-        <input type="number" id="tipInput" name="tipInput" placeholder="Tip Percentage (eg:3)">
-        <p class="output" id="totalOutput"> </p>
-        
-        <br>
-
-        <button id="submitButton" value="Submit" onclick="submitForm()" > Submit </button>
-
-    </form>
+<div class="question">
+    <h2 for="string"> #1:</h2>
+    <label class="prompt" for="string">Enter a string and the string will be displayed in reverse:</label>
+    <br>
+    <input type="text" id="stringInput" placeholder="Enter String">
+    <button id="submitButton1" onclick="reverseString()">Submit</button>
+    <br>
+    <output for="stringInput" id="stringOutput" class="output"></output>
+</div>
+    <br>
+<div class="question">
+    <h2 for="string"> #2:</h2>
+    <label class="prompt" for="palindrome">Enter a series of numbers to check if it is a palindrome:</label>
+    <br>
+    <input type="text" id="pInput" placeholder="Enter Numbers">
+    <button id="submitButton2" onclick="palindromeCheck()">Submit</button>
+    <br>
+    <output for="pInput" id="pOutput" class="output"></output>    
+</div> 
+    <br>
+<div class="question">
+    <h2 for="string"> #3:</h2>
+    <label class="prompt" for="total">Calulate total amount to be paid:</label>
+    <br>
+    <input type="text" id="subtotalInput" name="subtotalInput" placeholder="Enter Subtotal">
+    <input type="text" id="tipInput" name="tipInput" placeholder="Tip Percentage (eg:3)">    
+    <button id="submitButton3" onclick="totalAmount()">Submit</button>
+    <br>
+    <output for="subtotalInput tipInput" id="totalOutput" class="output"></output>
+</div>
+    <br>
     
-    <script> src="index.js" </script>
+    <script src="index.js"></script>
 
 </body>
 

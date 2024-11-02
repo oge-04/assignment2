@@ -1,29 +1,41 @@
-let stringInput = document.getElementById("stringInput");
+// #1
+function reverseString () {
+  
+  let stringInput = document.getElementById("stringInput").value;
+  let stringOutput = " ";
+  for ( let length = stringInput.length - 1; length >= 0; length -- ) {
+    stringOutput += stringInput[length]
+  } 
+  document.getElementById("stringOutput").innerHTML = stringOutput;
+  console.log (stringOutput);
+  
+}
 
-function submitForm() {
-    // #1
-   
-    function reverseString(){
 
-        let stringOutput = "";
-        for(let length = stringInput.length-1; i >= 0; i--)
-            {
-          stringOutput += str[i];
-        }
-        return stringOutput;
-      }
-      
-        document.getElementById("stringOutput").innerHTML = stringOutput;
-    
-      
-    // #2
-   
+// #2
+function palindromeCheck() {
 
-    // #3
-    let subtotal = document.getElementById("subtotalInput").value;
-    let tip = document.getElementById("tipInput").value;
-    let total = subtotal * (1 + (tip/100));
-
-    document.getElementById("totalOutput").innerHTML = total;
+  let pInput = document.getElementById("pInput").value;
+  let pOutput = "";
+  for ( let length = pInput.length - 1; length >= 0; length-- ) {
+    pOutput += pInput[length]
+  }
+  if (pOutput == pInput) {
+    document.getElementById("pOutput").innerHTML = "Palindrome";
+  } else {
+    document.getElementById("pOutput").innerHTML = "Not Palindrome";
+  }
+  console.log(pOutput);
 
 }
+
+
+// #3
+function totalAmount() {
+
+  let subtotal = parseFloat(document.getElementById("subtotalInput").value);
+  let tip = parseFloat(document.getElementById("tipInput").value);
+  let total =subtotal * (1 + (tip/100));
+  document.getElementById("totalOutput").innerHTML = total.toFixed(2);
+
+  }
